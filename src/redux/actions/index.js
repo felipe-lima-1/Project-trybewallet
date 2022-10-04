@@ -1,5 +1,6 @@
 export const CATCH_EMAIL = 'CATCH_EMAIL';
 export const CATCH_EXPENSE = 'CATCH_EXPENSE';
+export const RMV_EXPENSES = 'RMV_EXPENSES';
 
 export const catchUser = (email) => ({
   type: CATCH_EMAIL,
@@ -18,6 +19,11 @@ export const catchExpense = (expense, element) => ({
   payload: { ...expense,
     exchangeRates: element,
   },
+});
+
+export const rmvExpenses = (expense) => ({
+  type: RMV_EXPENSES,
+  payload: expense,
 });
 
 export function fetchApi() {
